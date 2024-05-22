@@ -1,0 +1,44 @@
+<table class="table-fixed w-full border-spacing-0">
+    <thead>
+        <tr>
+            <th>
+                <input type="checkbox" (click)="selectAll()">
+                全选
+            </th>
+            <th>商品</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of carData.data">
+            <!-- <td>{{i.picture}}</td> -->
+            <td class="flex justify-center items-center">
+                <input type="checkbox"   [checked]="allChecked">
+                <img class="w-[100px] aspect-auto"
+                    src="{{i.car_picture}}"
+                    alt="">
+            </td>
+            <td>
+                {{i.car_desc}}
+            </td>
+            <td>
+              ￥{{i.car_price}}
+            </td>
+            <td>
+                <button (click)="reduce(i.id)">-</button>
+                <span>{{i.car_count}}</span>
+                <button (click)="add(i.id)">+</button>
+            </td>
+            <td>￥{{i.car_price*i.car_count}}</td>
+            <td>
+                <button class="btn border-none">删除</button>
+            </td>
+        </tr>
+
+    </tbody>
+
+
+</table>

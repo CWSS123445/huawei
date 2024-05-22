@@ -1,0 +1,16 @@
+<div class="body-container container">
+    <div class="title">手机专区</div>
+    <div class="module">
+        <div class="box"  *ngFor="let i of phoneData.data">
+            <div class="img-box">
+                <img src="{{i.picture}}" alt="">
+            </div>
+            <div class="name">{{i.name}}</div>
+            <div class="desc">{{i.desc}}</div>
+            <div class="price">
+                <div class="new-price">￥{{i.newPrice}}</div>
+                <div class="old-price" *ngIf="i.oldPrice!==0">￥{{i.oldPrice}}</div>
+            </div>
+            <button class="btn" (click)="goToDetail(i.id)">详情</button>
+        </div>
+    </div>

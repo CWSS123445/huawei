@@ -1,0 +1,74 @@
+<app-top></app-top>
+<div>
+    <div class="container">
+        <div class="title">首页>手机>Mate系列</div>
+        <div class="classify">
+            <div class="classify-box">
+                <div>分类：</div>
+                <div>{{title}}</div>
+            </div>
+            <div class="classify-box">
+                <div>服务优惠：</div>
+                <div>仅看有货</div>
+            </div>
+            <div class="classify-box">
+                <div>排序：</div>
+                <div [ngClass]="{red:!sortBy}">综合</div>
+                <div>最新</div>
+                <div class="btn-comment"[ngClass]="{red:sortBy}" (click)="sortByComment()">评论数</div>
+                <div class="price-box" [ngClass]="{'red':isShow}" >
+                    <div>价格：</div>
+                    <div class="price-input-box">
+                        <div class="price-input">
+                            <div class="price"><input type="text" [(ngModel)]="minPrice"></div>
+                            <div class="middle-box"> — </div>
+                            <div class="price"><input type="text" [(ngModel)]="maxPrice"></div>
+                        </div>
+                        <div class="btn-box">
+                            <button class="btn-cancel" (click)="clearPrice()">清空</button>
+                            <button (click)="getListByPrice()" class="btn-yes">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div *ngIf="selectData.data.length==0&&isShow==true" class="no-data">
+    暂无数据
+<img src="https://res.vmallres.com/portal/1.24.2.300.Re.20240204175745/h5/images/searchNoResult.png" alt="">
+</div>
+
+
+
+        <div class="series">
+            <div class="module">
+                <ng-container *ngIf="isShow==false">
+                    <div class="box" *ngFor="let i of mateData.data">
+                        <div class="img-box">
+                            <img src="{{i.mate_phone}}" alt="{{i.mate_name}}加载失败">
+                            <div class="is-have" *ngIf="i.is_have==1">暂时缺货</div>
+                        </div>
+                        <div class="name">{{i.mate_name}}</div>
+                        <div class="introduce">{{i.mate_desc}}</div>
+                        <div class="price">￥{{i.mate_price}}</div>
+                        <div class="comment">{{i.mate_comment}}人评价 99%好评</div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="isShow==true">
+                    <div class="box" *ngFor="let i of selectData.data">
+                        <div class="img-box">
+                            <img src="{{i.mate_phone}}" alt="{{i.mate_name}}加载失败">
+                            <div class="is-have" *ngIf="i.is_have==1">暂时缺货</div>
+                        </div>
+                        <div class="name">{{i.mate_name}}</div>
+                        <div class="introduce">{{i.mate_desc}}</div>
+                        <div class="price">￥{{i.mate_price}}</div>
+                        <div class="comment">{{i.mate_comment}}人评价 99%好评</div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <app-bottom></app-bottom> -->
+<app-bottom></app-bottom>

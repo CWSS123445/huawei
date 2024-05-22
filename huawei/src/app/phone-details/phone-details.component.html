@@ -1,0 +1,66 @@
+<!-- <div class="container" *ngFor="let i of phoneData.data">
+    <div class="img-box">
+        <img src="{{i.picture}}" alt="">
+    </div>
+    <div class="detail">
+        <div class="name">{{i.name}}</div>
+    </div>
+</div> -->
+
+
+<div *ngIf="phoneData">
+    <div class="container" *ngFor="let i of phoneData.data">
+        <div class="img-box">
+            <img src="{{i.picture}}" alt="">
+        </div>
+        <div class="detail">
+            <div class="name">{{i.name}}</div>
+            <div class="desc">{{i.desc}}</div>
+            <div class="price">
+                <span class="price-icon">￥</span>
+                {{i.newPrice}}
+            </div>
+            <div class="text">
+                <button>赠品</button>
+                <button>赠送积分</button>
+                <button>0分期利息</button>
+            </div>
+            <h3>配置</h3>
+            <div class="config-box">
+                <button class="config-item">16/256GB</button>
+            </div>
+            <h3>颜色</h3>
+            <div class="color-box">
+                <button class="color-item select-color">黑色</button>
+                <button class="color-item">白色</button>
+                <button class="color-item">蓝色</button>
+                <button class="color-item">粉色</button>
+            </div>
+            <!-- </div>
+            <h3>送至</h3>
+            <div class="address-box">
+                <div class="address-item">北京</div>
+            </div>
+            <h3>回收</h3>
+            <span>高价回收 高价回收送多重购新补贴</span>
+
+            <div>
+                <div>满48元包邮</div>
+                <div>由华为终端提供商品</div>
+                <div>发货开票及售后服务</div>
+            </div> -->
+            <!-- <h2>{{i.newPrice}}</h2>
+            <div>已选:aaaaaaaaaaa</div> -->
+
+            <div class="btn-box">
+                <div>
+                    <button class="btn-item">-</button>
+                    <span>1</span>
+                    <button class="btn-item">+</button>
+                </div>
+                <button class="add-car">加入购物车</button>
+            </div>
+
+        </div>
+    </div>
+</div>

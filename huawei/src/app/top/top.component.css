@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  .f-left {
+    float: left;
+  }
+  
+  .f-right {
+    float: right;
+  }
+  
+  .container {
+      margin: auto;
+  }
+  
+  
+  
+  
+  .nav-bar {
+    height: 35px;
+    background-color: #333333;
+    min-width: 1226px;
+  }
+  
+  .left-nav-link>li {
+    float: left;
+  }
+  
+  .left-nav-link>li>a {
+    display: block;
+    height: 35px;
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 0px 5px;
+    line-height: 35px;
+  }
+  
+  .left-nav-link>li>a:hover {
+    color: #ff6a00;
+  }
+  
+  .shopping-cart-link {
+    background-color: #424242;
+    padding: 0px 10px !important;
+  }
+  
+  .nav-type-box {
+    /* border: 2px solid black; */
+  }
+  
+  .left-logo-link>img {
+    margin-left: 30px;
+    width: 100px;
+    height: 60px;
+    vertical-align: top;
+  }
+  
+  .nav-type-box {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px 10px;
+  }
+  
+  .right-input-box {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    bottom: 0;
+    height: 40px;
+    margin: auto 0;
+  
+    /* border: 1px solid lightgray; */
+  }
+  
+  .query-text {
+    width: 260px;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    padding-left: 10px;
+  }
+  
+  .btn-query {
+    width: 60px;
+    height: 40px;
+    border: none;
+    box-sizing: border-box;
+    background-color: white;
+    border-left: 1px solid lightgray;
+  }
+  
+  .nav-type-list>li {
+    float: left;
+    margin: 0px 10px;
+  }
+  
+  .nav-type-list {
+    line-height: 60px;
+    margin-left: 200px;
+  }
+  
+  .nav-type-list>li>a {
+    text-decoration: none;
+    color: black;
+    /* font-size: 22px; */
+  }
+  
+  .nav-type-list>li>a:hover {
+    color: #ff6a00;
+  }
+  
+  /* 轮播图 */
+  .box {
+    position: relative;
+  }
+  
+  .div1 {
+    position: relative;
+    width: 100%;
+    height: 540px;
+  }
+  
+  .div1>img {
+    position: absolute;
+    width: 100%;
+    height: 540px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  
+  }
+  
+  .div2 {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    width: 120px;
+    margin: auto;
+    z-index: 999;
+  
+  }
+  
+  .div2>label {
+    display: block;
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    float: left;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+  
+  }
+  
+  .div2>label:hover {
+    /* background-color: yellow; */
+  }
+  
+  [name="raido1"] {
+    display: none;
+  }
+  
+  [name="raido1"]:checked+img {
+    opacity: 1;
+  }
+  
+  .img-box {
+    /* height: 460px;
+       */
+    height: 540px;
+  
+    position: absolute;
+    left: 50px;
+    top: 0;
+  }
+  
+  .ul1 {
+    background-color: white;
+    width: 160px;
+    height: 540px;
+  }
+  
+  .ul1>li {
+    height: 46px;
+    line-height: 46px;
+    padding: 0 15px;
+  
+  }
+  
+  .ul1>li>a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .ul1>li>a::after {
+    content: ">";
+    position: absolute;
+    left: 140px;
+  }
+  
+  .ul1>li:hover {
+    /* background-color: orange; */
+    font-weight: bolder;
+  }
+  
+  .detail {
+    position: absolute;
+    left: 160px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+  }
+  
+  /* .detail>img{
+      width: 100%;
+      height: 100%;
+  } */
+  
+  .ul1>li:hover>.detail {
+    display: block;
+  }
+  
+  /* .aaa{
+      width: 300px;
+      height: 100%;
+      background-color: white;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+  
+  }
+  .aaa>div{
+      display: flex;
+      height: 50px;
+  }
+  .aaa img{
+      width: 50px;
+      height: 50px;
+  }
+  .aaa span{
+      font-size: 12px;
+      font-weight: lighter;
+  } */
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  
+  /* 
+   */
+  
+  
+  .aaa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-box {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 150px;
+  }
+  
+  .aaa input {
+    width: 600px;
+    outline: none;
+  }
+  
+  .btn-back {
+    /* border: none; */
+    all: unset;
+  }
+  

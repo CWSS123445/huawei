@@ -1,0 +1,100 @@
+.container {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .img-box {
+    width: 400px;
+    /* height: 400px; */
+    height: 100%;
+    margin-right: 20px;
+  }
+  .img-box>img{
+    width: 100%;
+  }
+  .detail{
+    height: 100%;
+    flex: 1;
+    overflow: auto;
+  }
+  .detail>.desc{
+    font-size: 12px;
+  }
+  .price{
+    font-size: 22px;
+    color: #cf0a2c;}
+  
+    .pirce-icon{
+      font-size: 12px;
+    }
+  
+  .text>button{
+    background-color: #fdf3f4;
+    color: #cf0b2d;
+    border: none;
+  }
+  .config-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .config-item{
+    color: #cf0a2c;
+    border: 1px solid #cf0a2c;
+    background-color: white;
+    padding: 15px 60px;
+    border-radius: 5px;
+  }
+  
+  .color-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .color-item{
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: white;
+  
+    padding: 10px;
+  
+  }
+  .select-color{
+    cursor: pointer;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #cf0a2c;
+    color: cf0a2c;
+  }
+  .btn-box{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+  }
+  .btn-item{
+    width: 15px;
+    height: 15px;
+  }
+  .add-car{
+    display: block;
+    margin-left: 10px;
+    width: 200px;
+    height: 40px;
+    background-color: #ffa649;
+    border: none;
+    border-radius: 100px;
+  }
+  
+  
+  
+  

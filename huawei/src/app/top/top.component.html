@@ -1,0 +1,53 @@
+<!-- 导航链接完成 -->
+<nav class="nav-bar ">
+    <div class="container top-box clearfix">
+        <ul class="left-nav-link clearfix f-left">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">消费者业务网站</a></li>
+            <li><a href="#">优购码</a></li>
+            <li><a href="#">企业商用</a></li>
+            <li><a href="#">更多精彩</a></li>
+        </ul>
+        <ul class="left-nav-link clearfix f-right">
+            <li><a href="#">清登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="#">我的订单</a></li>
+            <li><a href="#">客服</a></li>
+            <li><a href="#">网站导航</a></li>
+            <li><a href="#">手机版</a></li>
+            <li><a href="#" class="shopping-cart-link"  routerLink="/shopping-car">购物车({{carNumber}})</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="clearfix nav-type-box container" *ngIf="isShow" >
+        <!-- 左边 -->
+        <a href="#" class="left-logo-link f-left">
+            <img src="https://res.vmallres.com/portal/1.24.2.300.Re.20240204175745/h5/images/logo_app.png" alt="">
+        </a>
+        <!-- 中间 -->
+        <ul class="nav-type-list clearfix">
+            <li><a href="#">华为</a></li>
+            <li><a href="#">鸿蒙智行</a></li>
+            <li><a href="#">华为智选</a></li>
+            <li><a href="#">生态周边</a></li>
+        </ul>
+ 
+        <div class="right-input-box">
+            <span class="iconfont icon-sousuo1" (click)="search()"></span>
+        </div>
+
+    </div>
+    <!--  
+    
+-->
+    <div class="container clearfix nav-type-box aaa " *ngIf="!isShow">
+        <div class="search-box">
+            <span class="iconfont icon-sousuo1"></span>
+            <input type="text" placeholder="搜索商品" class="query-text">
+            <button class="btn-back" (click)="search()">x</button>
+        </div>
+    </div>
+
+
+

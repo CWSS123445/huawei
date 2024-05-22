@@ -1,0 +1,20 @@
+/**
+ * 数据表cost_detail_info的操作
+ */
+const BaseService = require('./BaseService');
+
+class ComputerService extends BaseService {
+    constructor() {
+        super();
+        this.currentTable = this.tableMap.computer;
+    }
+
+   
+    async  getById(id){
+        let sql=`select * from ${this.currentTable} 
+        where id = ? and  is_del = 0`;
+         return this.executeSql(sql,[id]);
+     }
+}
+
+module.exports = ComputerService;
